@@ -1,0 +1,155 @@
+button.messages-button{
+	  position: fixed;
+    background-color: #3498db;
+    bottom: 30px;
+    right: 40px;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    font-size: 21pt;
+    z-index: 64;
+	
+		
+}
+
+div.mensagens-painel{
+	background: #fff;
+/*	background: red;*/
+	border-radius: 5px;
+	width: 350px;
+	height: 400px;
+	position: fixed;
+	bottom: 110px;
+	right: 40px;
+	z-index: 64;
+	
+	font-family: 'Open Sans';
+	
+	transform: translateY(20px);
+	opacity: 0;
+	visibility: hidden;
+	
+	transition: visibility 1s, transform 1s, opacity 1s;
+}
+
+	div.mensagens-painel.show{
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0px);
+		transition: transform 1s, opacity 1s;
+	}
+
+	div.mensagens-painel div.scrollable{
+		
+	}
+
+		div.mensagens-painel div.scrollable div.header{
+			display: block;
+			width: 100%;
+			height: 100px;
+			background: #2c3e50;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+
+			div.mensagens-painel div.scrollable div.header ul{
+				padding: 0px;
+				margin: 0px;
+				
+				top: 12px;
+				
+				padding: 0px;
+				margin: 0px;
+				display: inline-block;
+				position: relative;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+				div.mensagens-painel div.scrollable div.header ul li{
+					list-style: none;
+					display: inline-block;
+					text-align: center;
+					cursor: pointer;
+				}
+
+					div.mensagens-painel div.scrollable div.header ul li:not(:last-child){
+						margin-right: 30px;
+						
+						
+					}
+
+					div.mensagens-painel div.scrollable div.header ul li img{
+						
+					}
+
+					div.mensagens-painel div.scrollable div.header ul li span.nome{
+						font-weight: bold;
+						color: #fff;
+						display: block;
+					}
+
+		div.mensagens-painel div.scrollable > ul{
+			padding: 0px;
+			margin: 0px;
+			
+		}
+
+			div.mensagens-painel div.scrollable > ul li{
+				list-style: none;
+				padding: 10px 0px;
+				cursor: pointer;
+			}
+
+				div.mensagens-painel div.scrollable > ul li:not(:last-child){
+					border-bottom: 1px solid #c0c0c0;
+				}
+
+				div.mensagens-painel div.scrollable > ul li img{
+					width: 50px;
+					height: 50px;
+					margin-left: 10px;
+					margin-right: 10px;
+					float: left;
+				}
+
+				div.mensagens-painel div.scrollable > ul li div.others{
+					display: inline-block;
+				}
+
+					div.mensagens-painel div.scrollable > ul li div.others span{
+						display: block;
+						line-height: 25px;
+						
+					}
+
+						div.mensagens-painel div.scrollable > ul li div.others span.nome{
+							font-weight: bold;
+							color: #424242;
+						}
+
+						div.mensagens-painel div.scrollable > ul li div.others span.mensagem{
+							color: #c0c0c0;
+							font-weight: 100;
+						}
+
+	div.mensagens-painel input.friends-search{
+		position: absolute;
+    bottom: 0px;
+    height: 30px;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-top: 1px solid #c0c0c0;
+    outline: none;
+    padding: 10px;
+    height: 45px;
+    font-family: 'Open Sans';
+		font-size: 10pt;
+}
+	}

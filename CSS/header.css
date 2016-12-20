@@ -1,0 +1,255 @@
+body{
+	margin: 0 auto;
+}
+
+header{
+	background-color: #2c3e50;
+	height: 64px;
+	width: 100%;
+	
+	position: fixed;
+	top: 0;
+	
+	z-index: 64;
+	
+}
+
+	header div.clear{
+		display: inline-block;
+		clear: both;
+	}
+
+	header img.header-logo{
+		height: 35px;
+		margin-left: 40px;
+		margin-top: 12px;
+	}
+
+	header input.header-search{
+		width: calc(100% - 728px);
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    text-align: center;
+    /* margin-top: 7px; */
+    border: none;
+    outline: none;
+    top: 10px;
+    position: absolute;
+    margin-left: 20px;
+    font: 300 18px 'Open Sans';
+    color: #2c3e50;
+	}
+
+		header input.header-search::-webkit-input-placeholder {
+			 color: rgba(0,0,0,0.3);
+		}
+
+		header input.header-search:-moz-placeholder { /* Firefox 18- */
+			 color: rgba(0,0,0,0.3); 
+		}
+
+		header input.header-search::-moz-placeholder {  /* Firefox 19+ */
+			 color: rgba(0,0,0,0.3);
+		}
+
+		header input.header-search:-ms-input-placeholder {  
+			 color: rgba(0,0,0,0.3);
+		}
+
+	header div.right{
+		float: right;
+		margin-right: 40px;
+	}
+
+	header div.carteira{
+		background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 20px;
+    /* margin-top: 12px; */
+    padding: 0px 20px 0px 50px;
+    position: relative;
+    top: -3px;
+    margin-right: 10px;
+		
+		cursor: pointer;
+	}
+
+	
+		header div.carteira span.sifrao{
+			display: inline-block;
+			/* float: left; */
+			background: #27ae60;
+			height: 40px;
+			width: 40px;
+			border-radius: 40px;
+			position: absolute;
+			left: 0px;
+			line-height: 40px;
+			text-align: center;
+			font-family: 'Open Sans';
+			color: #1F2C38;
+			font-size: 15pt;
+		}
+
+		header div.carteira span.valor{
+			display: inline-block;
+			color: #fff;
+			font-family: 'Open Sans';
+			font-weight: 100;
+			line-height: 40px;
+		}
+
+	header button.criar-evento{
+		background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    color: #2c3e50;
+    font: 400 18px 'Open Sans';
+    /* margin-top: 10px; */
+    top: -2px;
+    padding: 0px 15px;
+    position: relative;
+    margin-right: 10px;
+		outline: none;
+		
+		cursor: pointer;
+	}
+	
+	header button.notificacoes{
+		background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    font-size: 20pt;
+    position: relative;
+    top: 0px;
+    margin-right: 10px;
+		cursor: pointer;
+	}
+
+		header button.notificacoes:after{
+			content: attr(data-numero);
+			background: red;
+			/* height: 11px; */
+			position: absolute;
+			top: 0px;
+			left: 20px;
+			font-size: 8pt;
+			padding: 1px 5px;
+			border-radius: 10px;			
+		}
+
+	header img.header-foto{
+		position: relative;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    margin-right: 10px;
+		
+		margin-right: 10px;
+		
+		cursor: pointer;
+	}
+
+	header button.header-bars{
+		background: transparent;
+    border: none;
+    /* background: url(IMAGES/Botao-menu.png); */
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    top: 2px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 23pt;
+    line-height: 40px;
+    padding: 0px;
+    text-align: center;
+		outline: none;
+		
+		cursor: pointer;
+	}
+
+div.drop-menu{
+	width: 200px;
+	background: #fff;
+	position: fixed;
+	
+	top: 90px;
+	opacity: 0;
+	visibility: hidden;
+	
+	transition: top 1s, opacity 1s, visibility 1s;;
+	
+	border-radius: 5px;
+	
+	z-index: 64;
+	
+	font-family: 'Open Sans';
+}
+
+	div.drop-menu:before{
+		content: "";
+    color: red;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -15px;
+	}
+
+	div.drop-menu.show{
+		top: 70px;
+		opacity: 1;
+		visibility: visible;
+		
+		transition: top 1s, opacity 1s;
+	}
+
+	div.drop-menu.wallet-menu{
+		right: 344px;
+		
+	}
+
+	div.drop-menu.personal-menu{
+		right: 14px;
+	}
+
+	div.drop-menu ul{
+		margin: 0px;
+		padding: 0px 10px;
+		
+	}
+
+		div.drop-menu ul li{
+			list-style: none;
+			text-align: center;
+			line-height: 40px;
+			color: #424242;
+			
+		}
+
+			div.drop-menu ul li.red{
+				color: #e74c3c;
+			}
+	
+			div.drop-menu ul li.green{
+				color: #27ae60;
+			}
+
+		div.drop-menu ul li:not(:last-child){
+			border-bottom: 1px solid #c0c0c0;
+		}
